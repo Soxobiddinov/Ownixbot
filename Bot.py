@@ -1,5 +1,5 @@
 import os
-TOKEN = osgetenv("TOKEN")
+TOKEN = os.getenv("TOKEN")
 import yt_dlp
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, CallbackQueryHandler, ContextTypes, filters
@@ -132,4 +132,5 @@ app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 app.add_handler(CallbackQueryHandler(button_handler))
 
 print("Bot ishga tushdi...")
+
 app.run_polling()
