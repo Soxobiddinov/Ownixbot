@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: ownixbot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python Bot.py
+    envVars: []
+    pythonVersion: 3.11.9
